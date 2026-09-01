@@ -1,49 +1,689 @@
-<p align="center">
- <img width="100px" src="https://res.cloudinary.com/anuraghazra/image/upload/v1594908242/logo_ccswme.svg" align="center" alt="Github Readme Stats" />
- <h2 align="center">Profile</h2>
-</p>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-### Hi there 👋 I'm [Anand K. Mainali](https://anandmainali.com.np)
-> Software Engineer at [SoftNEP](https://softnep.com)
+    <title>Anand K. Mainali | Software Engineer</title>
+
+    <meta name="description" content="Portfolio and profile of Anand K. Mainali, Software Engineer.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #24292f;
+            background: #ffffff;
+        }
+
+        a {
+            color: #0969da;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Navigation */
+        nav {
+            background: #161b22;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            font-size: 0.95rem;
+        }
+
+        /* Hero */
+        .hero {
+            background: #f6f8fa;
+            text-align: center;
+            padding: 90px 20px;
+            border-bottom: 1px solid #d0d7de;
+        }
+
+        .hero img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 1.25rem;
+            font-weight: normal;
+            color: #57606a;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #57606a;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 20px;
+            margin: 5px;
+            border-radius: 6px;
+            background: #24292f;
+            color: white;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #0969da;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 0;
+        }
+
+        section:nth-child(even) {
+            background: #f6f8fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        /* About */
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #57606a;
+            font-size: 1.05rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .skill {
+            background: #ddf4ff;
+            color: #0969da;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #57606a;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            font-weight: bold;
+        }
+
+        /* GitHub Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stats img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .contact-link {
+            padding: 10px 18px;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .contact-link:hover {
+            background: #f6f8fa;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #161b22;
+            color: #8b949e;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            nav .container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+
+            <div class="logo">
+                Anand K. Mainali
+            </div>
+
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#stats">GitHub</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
 
 
-<img src="https://komarev.com/ghpvc/?username=anandmainali" alt="anandmainali" />
+    <!-- Hero Section -->
+    <header class="hero">
 
-<div>
- <p>
-I am Mid-level Web developer able to build a Web presence from the ground up - from concept, navigation, layout and programming. Skilled at writing well-designed, testable and efficient code using current best practices in Web development. Fast learner, hard worker and team player who is proficient in an array of scripting languages and multimedia Web tools.
+        <div class="container">
 
-I have excellent design & coding skills, as well as an ability to convert requirements into exciting online applications.
-</p>
-</div>
+            <img
+                src="https://res.cloudinary.com/anuraghazra/image/upload/v1594908242/logo_ccswme.svg"
+                alt="GitHub Logo"
+            >
 
-### Programming Languages 🌐
+            <h1>Hi, I'm Anand K. Mainali 👋</h1>
 
-| [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/laravel/laravel.png" alt="Laravel" width="24">](https://laravel.com/) | [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/php/php.png" alt="php" width="38">](https://php.net/)  | [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png" alt="Vue" width="24">](https://vuejs.org/)  |  [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="Bootstrap" width="24">](https://getbootstrap.com/) |  [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="jQuery" width="24">](https://jquery.com/) | [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/jquery/jquery.png" alt="jQuery" width="24">](https://jquery.com/)
-|---|---|---|---|---|---|
- 
-### Tools 🛠️
+            <h2>
+                Software Engineer at
+                <a href="https://softnep.com" target="_blank">
+                    SoftNEP
+                </a>
+            </h2>
 
-| [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" alt="mysql" width="24">](https://www.mysql.com/) |  [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" alt="firebase" width="24">](https://firebase.google.com/) | [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" alt="Git" width="24">](https://git-scm.com/) |  [<img src="https://logonoid.com/images/phpstorm-logo.png" alt="Phpstorm" width="24">](https://www.jetbrains.com/phpstorm/) | [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" alt="vscode" width="24">](https://code.visualstudio.com/) | [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ubuntu/ubuntu.png" alt="Ubuntu" width="24">](https://ubuntu.com/)  |  [<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/redis/redis.png" alt="Redis" width="24">](https://redis.io/) | Varnish Cache | many more...
-|---|---|---|---|---|---|---|---|---|
+            <p>
+                I build modern web applications and software solutions,
+                with a focus on clean code, efficient systems, and
+                user-friendly experiences.
+            </p>
 
-### Github Stats
+            <div class="buttons">
 
-[![Anand K. Mainali GitHub Stats](https://github-readme-stats.vercel.app/api?username=anandmainali&show_icons=true&count_private=true)](https://github.com/anandmainali)
+                <a
+                    class="button"
+                    href="https://github.com/anandmainali"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
 
-### Github Repos
+                <a
+                    class="button"
+                    href="https://www.anandmainali.com.np"
+                    target="_blank"
+                >
+                    Website
+                </a>
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=anandmainali&repo=PackageTemplate&show_owner=true)](https://github.com/anandmainali/PackageTemplate)
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=anandmainali&repo=Foods-Ecommerce&show_owner=true)](https://github.com/anandmainali/Foods-Ecommerce)
+                <a
+                    class="button"
+                    href="https://www.linkedin.com/in/anandmainali/"
+                    target="_blank"
+                >
+                    LinkedIn
+                </a>
 
-<h3> 🤝🏻 Connect with Me </h3>
+            </div>
 
-<p align="center">
-<a href="https://www.anandmainali.com.np" target="_blank"><img alt="Website" src="https://img.shields.io/badge/Website-www.anandmainali.com.np-blue?style=flat&logo=google-chrome"></a>
-<a href="https://www.linkedin.com/in/anandmainali/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@anandmainali-blue?style=flat&logo=linkedin"></a>
-<a href="https://stackoverflow.com/users/8519896/anand-mainali?tab=profile" target="_blank"><img alt="Stack Overflow" src="https://img.shields.io/badge/Stackoverflow-Anand%20Mainali-blue?style=flat&logo=stackoverflow"></a>
-<a href="mailto:anandmainali5@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-anandmainali5@gmail.com-blue?style=flat&logo=gmail"></a>
-</p>
+        </div>
+
+    </header>
 
 
-⭐️ From [@anandmainali](https://github.com/anandmainali)
+    <!-- About -->
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="about">
+
+                <p>
+                    I am a mid-level web developer able to build a web
+                    presence from the ground up — from concept,
+                    navigation, layout, and programming.
+                </p>
+
+                <br>
+
+                <p>
+                    I am skilled at writing well-designed, testable,
+                    and efficient code using current best practices
+                    in web development.
+                </p>
+
+                <br>
+
+                <p>
+                    I am a fast learner, hard worker, and team player
+                    who is proficient in an array of programming
+                    languages, frameworks, databases, and web tools.
+                </p>
+
+                <br>
+
+                <p>
+                    I have strong design and coding skills, as well as
+                    the ability to convert requirements into exciting
+                    online applications.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Programming Languages -->
+    <section id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Programming Languages & Technologies 🌐
+            </h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <h3>Languages</h3>
+
+                    <div class="skill-list">
+                        <span class="skill">PHP</span>
+                        <span class="skill">JavaScript</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>Frameworks</h3>
+
+                    <div class="skill-list">
+                        <span class="skill">Laravel</span>
+                        <span class="skill">Vue.js</span>
+                        <span class="skill">Bootstrap</span>
+                        <span class="skill">jQuery</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>Databases & Services</h3>
+
+                    <div class="skill-list">
+                        <span class="skill">MySQL</span>
+                        <span class="skill">Firebase</span>
+                        <span class="skill">Redis</span>
+                        <span class="skill">Varnish Cache</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Tools -->
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Tools 🛠️
+            </h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>Development</h3>
+
+                    <div class="skill-list">
+                        <span class="skill">Git</span>
+                        <span class="skill">VS Code</span>
+                        <span class="skill">PhpStorm</span>
+                        <span class="skill">Ubuntu</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Backend</h3>
+
+                    <div class="skill-list">
+                        <span class="skill">MySQL</span>
+                        <span class="skill">Redis</span>
+                        <span class="skill">Firebase</span>
+                        <span class="skill">Varnish</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Featured GitHub Projects
+            </h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+
+                    <h3>PackageTemplate</h3>
+
+                    <p>
+                        A reusable package template designed to help
+                        streamline software development and package
+                        creation.
+                    </p>
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/anandmainali/PackageTemplate"
+                        target="_blank"
+                    >
+                        View on GitHub →
+                    </a>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>Foods-Ecommerce</h3>
+
+                    <p>
+                        An e-commerce application focused on food
+                        products and online purchasing functionality.
+                    </p>
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/anandmainali/Foods-Ecommerce"
+                        target="_blank"
+                    >
+                        View on GitHub →
+                    </a>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>More Projects</h3>
+
+                    <p>
+                        Explore additional projects, experiments,
+                        repositories, and contributions on GitHub.
+                    </p>
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/anandmainali"
+                        target="_blank"
+                    >
+                        View GitHub Profile →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GitHub Stats -->
+    <section id="stats">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                GitHub Stats
+            </h2>
+
+            <div class="stats">
+
+                <a
+                    href="https://github.com/anandmainali"
+                    target="_blank"
+                >
+
+                    <img
+                        src="https://github-readme-stats.vercel.app/api?username=anandmainali&show_icons=true&count_private=true"
+                        alt="Anand K. Mainali GitHub Stats"
+                    >
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <div class="container contact">
+
+            <h2 class="section-title">
+                Connect With Me 🤝
+            </h2>
+
+            <p>
+                Interested in working together or learning more
+                about my projects?
+            </p>
+
+            <div class="contact-links">
+
+                <a
+                    class="contact-link"
+                    href="https://www.anandmainali.com.np"
+                    target="_blank"
+                >
+                    🌐 Website
+                </a>
+
+                <a
+                    class="contact-link"
+                    href="https://www.linkedin.com/in/anandmainali/"
+                    target="_blank"
+                >
+                    💼 LinkedIn
+                </a>
+
+                <a
+                    class="contact-link"
+                    href="https://stackoverflow.com/users/8519896/anand-mainali?tab=profile"
+                    target="_blank"
+                >
+                    💬 Stack Overflow
+                </a>
+
+                <a
+                    class="contact-link"
+                    href="mailto:anandmainali5@gmail.com"
+                >
+                    ✉️ Email
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Anand K. Mainali. Built with HTML & CSS.
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
