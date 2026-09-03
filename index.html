@@ -19,6 +19,30 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand|Marck+Script">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .featured-project {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .featured-project .badge {
+            margin-bottom: 8px;
+        }
+
+        .featured-project img {
+            width: 100%;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .project-list li {
+            margin-bottom: 6px;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +52,7 @@
         </div>
         <hr class="line">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <h2>About me</h2>
                 <p>Write Something About Yourself Here.</p>
                 <h4>Likes:</h4>
@@ -47,27 +71,23 @@
                     <strong>Github: </strong><a href="https://github.com/">Github Account</a>
                 </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <h2>Projects</h2>
-                <ul>
-                    <li><a href="https://github.com/airbnb/MagazineLayout" target="_blank" rel=”noopener noreferrer”>MagazineLayout</a></li>
-                    <li><a href="https://github.com/flutter/flutter" target="_blank" rel=”noopener noreferrer”>flutter</a></li>
-                    <li><a href="https://github.com/NVIDIAGameWorks/PhysX" target="_blank" rel=”noopener noreferrer”>PhysX</a></li>
-                    <li><a href="https://github.com/vuejs/vue" target="_blank" rel=”noopener noreferrer”>vue</a></li>
-                    <li><a href="https://github.com/tensorflow/tensorflow" target="_blank" rel=”noopener noreferrer”>tensorflow</a></li>
+
+                <!-- Featured project -->
+                <div class="featured-project">
+                    <span class="badge badge-dark">Featured</span>
+                    <h4><a href="https://github.com/airbnb/MagazineLayout" target="_blank" rel="noopener noreferrer">MagazineLayout</a></h4>
+                    <p>A brief description of why this project is highlighted goes here.</p>
+                    <img src="images/project1.jpg" alt="MagazineLayout project screenshot">
+                </div>
+
+                <ul class="project-list">
+                    <li><a href="https://github.com/flutter/flutter" target="_blank" rel="noopener noreferrer">flutter</a></li>
+                    <li><a href="https://github.com/NVIDIAGameWorks/PhysX" target="_blank" rel="noopener noreferrer">PhysX</a></li>
+                    <li><a href="https://github.com/vuejs/vue" target="_blank" rel="noopener noreferrer">vue</a></li>
+                    <li><a href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener noreferrer">tensorflow</a></li>
                 </ul>
-            </div>
-            <div class="col-md-4">
-                <h2>Tweet Highlight</h2>
-                <blockquote class="twitter-tweet" data-theme="light">
-                    <p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>.
-                        <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a
-                            href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a
-                            href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of
-                    the Interior (@Interior) <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw">May
-                        5, 2014</a>
-                </blockquote>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
     </div>
