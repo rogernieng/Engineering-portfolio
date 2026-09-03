@@ -1,689 +1,76 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Anand K. Mainali | Software Engineer</title>
-
-    <meta name="description" content="Portfolio and profile of Anand K. Mainali, Software Engineer.">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #24292f;
-            background: #ffffff;
-        }
-
-        a {
-            color: #0969da;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        /* Navigation */
-        nav {
-            background: #161b22;
-            padding: 18px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: white;
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            color: #ffffff;
-            font-size: 0.95rem;
-        }
-
-        /* Hero */
-        .hero {
-            background: #f6f8fa;
-            text-align: center;
-            padding: 90px 20px;
-            border-bottom: 1px solid #d0d7de;
-        }
-
-        .hero img {
-            width: 110px;
-            height: 110px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            font-size: 1.25rem;
-            font-weight: normal;
-            color: #57606a;
-            margin-bottom: 25px;
-        }
-
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            color: #57606a;
-        }
-
-        .buttons {
-            margin-top: 30px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 11px 20px;
-            margin: 5px;
-            border-radius: 6px;
-            background: #24292f;
-            color: white;
-            font-weight: bold;
-        }
-
-        .button:hover {
-            background: #0969da;
-            text-decoration: none;
-        }
-
-        /* Sections */
-        section {
-            padding: 70px 0;
-        }
-
-        section:nth-child(even) {
-            background: #f6f8fa;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-
-        /* About */
-        .about {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            color: #57606a;
-            font-size: 1.05rem;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .skill-card {
-            background: white;
-            border: 1px solid #d0d7de;
-            border-radius: 8px;
-            padding: 25px;
-            text-align: center;
-        }
-
-        .skill-card h3 {
-            margin-bottom: 15px;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .skill {
-            background: #ddf4ff;
-            color: #0969da;
-            padding: 6px 10px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-
-        /* Projects */
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background: white;
-            border: 1px solid #d0d7de;
-            border-radius: 8px;
-            padding: 25px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
-
-        .project-card h3 {
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            color: #57606a;
-            margin-bottom: 15px;
-        }
-
-        .project-link {
-            font-weight: bold;
-        }
-
-        /* GitHub Stats */
-        .stats {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .stats img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        /* Contact */
-        .contact {
-            text-align: center;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 25px;
-        }
-
-        .contact-link {
-            padding: 10px 18px;
-            border: 1px solid #d0d7de;
-            border-radius: 6px;
-            background: white;
-        }
-
-        .contact-link:hover {
-            background: #f6f8fa;
-            text-decoration: none;
-        }
-
-        /* Footer */
-        footer {
-            background: #161b22;
-            color: #8b949e;
-            text-align: center;
-            padding: 25px;
-            font-size: 0.9rem;
-        }
-
-        /* Mobile */
-        @media (max-width: 700px) {
-            nav .container {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 2.1rem;
-            }
-
-            section {
-                padding: 50px 0;
-            }
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="One Page Website/Portfolio Template Which Is Too Minimal." />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fr0st1n.github.io/TooMinimal/">
+    <meta property="og:title" content="TooMinimal">
+    <meta property="og:description" content="One Page Website/Portfolio Template Which Is Too Minimal.">
+    <meta property="og:image" content="https://fr0st1n.github.io/TooMinimal/images/thumb.jpg">
+    <title>Too Minimal</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand|Marck+Script">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-
-            <div class="logo">
-                Anand K. Mainali
-            </div>
-
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#stats">GitHub</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
+    <div class="container">
+        <div class="header">
+            <h1 class="username">Your Name</h1>
         </div>
-    </nav>
-
-
-    <!-- Hero Section -->
-    <header class="hero">
-
-        <div class="container">
-
-            <img
-                src="https://res.cloudinary.com/anuraghazra/image/upload/v1594908242/logo_ccswme.svg"
-                alt="GitHub Logo"
-            >
-
-            <h1>Hi, I'm Anand K. Mainali 👋</h1>
-
-            <h2>
-                Software Engineer at
-                <a href="https://softnep.com" target="_blank">
-                    SoftNEP
-                </a>
-            </h2>
-
-            <p>
-                I build modern web applications and software solutions,
-                with a focus on clean code, efficient systems, and
-                user-friendly experiences.
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button"
-                    href="https://github.com/anandmainali"
-                    target="_blank"
-                >
-                    GitHub
-                </a>
-
-                <a
-                    class="button"
-                    href="https://www.anandmainali.com.np"
-                    target="_blank"
-                >
-                    Website
-                </a>
-
-                <a
-                    class="button"
-                    href="https://www.linkedin.com/in/anandmainali/"
-                    target="_blank"
-                >
-                    LinkedIn
-                </a>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- About -->
-    <section id="about">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                About Me
-            </h2>
-
-            <div class="about">
-
+        <hr class="line">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>About me</h2>
+                <p>Write Something About Yourself Here.</p>
+                <h4>Likes:</h4>
+                <p>Your likes.</p>
+                <h4>Dislikes:</h4>
+                <p>Your Dislikes.</p>
+                <h2>Contact & Social Media</h2>
                 <p>
-                    I am a mid-level web developer able to build a web
-                    presence from the ground up — from concept,
-                    navigation, layout, and programming.
+                    <i class="fas fa-envelope"></i>
+                    <strong>Email: </strong>example@gmail.com
+                    <br>
+                    <i class="fab fa-twitter-square"></i>
+                    <strong>Twitter: </strong><a href="https://twitter.com/twitter">@twitter</a>
+                    <br>
+                    <i class="fab fa-github-square"></i>
+                    <strong>Github: </strong><a href="https://github.com/">Github Account</a>
                 </p>
-
-                <br>
-
-                <p>
-                    I am skilled at writing well-designed, testable,
-                    and efficient code using current best practices
-                    in web development.
-                </p>
-
-                <br>
-
-                <p>
-                    I am a fast learner, hard worker, and team player
-                    who is proficient in an array of programming
-                    languages, frameworks, databases, and web tools.
-                </p>
-
-                <br>
-
-                <p>
-                    I have strong design and coding skills, as well as
-                    the ability to convert requirements into exciting
-                    online applications.
-                </p>
-
             </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Programming Languages -->
-    <section id="skills">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Programming Languages & Technologies 🌐
-            </h2>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-
-                    <h3>Languages</h3>
-
-                    <div class="skill-list">
-                        <span class="skill">PHP</span>
-                        <span class="skill">JavaScript</span>
-                    </div>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Frameworks</h3>
-
-                    <div class="skill-list">
-                        <span class="skill">Laravel</span>
-                        <span class="skill">Vue.js</span>
-                        <span class="skill">Bootstrap</span>
-                        <span class="skill">jQuery</span>
-                    </div>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Databases & Services</h3>
-
-                    <div class="skill-list">
-                        <span class="skill">MySQL</span>
-                        <span class="skill">Firebase</span>
-                        <span class="skill">Redis</span>
-                        <span class="skill">Varnish Cache</span>
-                    </div>
-
-                </div>
-
+            <div class="col-md-4">
+                <h2>Projects</h2>
+                <ul>
+                    <li><a href="https://github.com/airbnb/MagazineLayout" target="_blank" rel=”noopener noreferrer”>MagazineLayout</a></li>
+                    <li><a href="https://github.com/flutter/flutter" target="_blank" rel=”noopener noreferrer”>flutter</a></li>
+                    <li><a href="https://github.com/NVIDIAGameWorks/PhysX" target="_blank" rel=”noopener noreferrer”>PhysX</a></li>
+                    <li><a href="https://github.com/vuejs/vue" target="_blank" rel=”noopener noreferrer”>vue</a></li>
+                    <li><a href="https://github.com/tensorflow/tensorflow" target="_blank" rel=”noopener noreferrer”>tensorflow</a></li>
+                </ul>
             </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Tools -->
-    <section>
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Tools 🛠️
-            </h2>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <h3>Development</h3>
-
-                    <div class="skill-list">
-                        <span class="skill">Git</span>
-                        <span class="skill">VS Code</span>
-                        <span class="skill">PhpStorm</span>
-                        <span class="skill">Ubuntu</span>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Backend</h3>
-
-                    <div class="skill-list">
-                        <span class="skill">MySQL</span>
-                        <span class="skill">Redis</span>
-                        <span class="skill">Firebase</span>
-                        <span class="skill">Varnish</span>
-                    </div>
-                </div>
-
+            <div class="col-md-4">
+                <h2>Tweet Highlight</h2>
+                <blockquote class="twitter-tweet" data-theme="light">
+                    <p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>.
+                        <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a
+                            href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a
+                            href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of
+                    the Interior (@Interior) <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw">May
+                        5, 2014</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-
         </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Featured GitHub Projects
-            </h2>
-
-            <div class="projects">
-
-                <div class="project-card">
-
-                    <h3>PackageTemplate</h3>
-
-                    <p>
-                        A reusable package template designed to help
-                        streamline software development and package
-                        creation.
-                    </p>
-
-                    <a
-                        class="project-link"
-                        href="https://github.com/anandmainali/PackageTemplate"
-                        target="_blank"
-                    >
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-                <div class="project-card">
-
-                    <h3>Foods-Ecommerce</h3>
-
-                    <p>
-                        An e-commerce application focused on food
-                        products and online purchasing functionality.
-                    </p>
-
-                    <a
-                        class="project-link"
-                        href="https://github.com/anandmainali/Foods-Ecommerce"
-                        target="_blank"
-                    >
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-                <div class="project-card">
-
-                    <h3>More Projects</h3>
-
-                    <p>
-                        Explore additional projects, experiments,
-                        repositories, and contributions on GitHub.
-                    </p>
-
-                    <a
-                        class="project-link"
-                        href="https://github.com/anandmainali"
-                        target="_blank"
-                    >
-                        View GitHub Profile →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- GitHub Stats -->
-    <section id="stats">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                GitHub Stats
-            </h2>
-
-            <div class="stats">
-
-                <a
-                    href="https://github.com/anandmainali"
-                    target="_blank"
-                >
-
-                    <img
-                        src="https://github-readme-stats.vercel.app/api?username=anandmainali&show_icons=true&count_private=true"
-                        alt="Anand K. Mainali GitHub Stats"
-                    >
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-
-        <div class="container contact">
-
-            <h2 class="section-title">
-                Connect With Me 🤝
-            </h2>
-
-            <p>
-                Interested in working together or learning more
-                about my projects?
-            </p>
-
-            <div class="contact-links">
-
-                <a
-                    class="contact-link"
-                    href="https://www.anandmainali.com.np"
-                    target="_blank"
-                >
-                    🌐 Website
-                </a>
-
-                <a
-                    class="contact-link"
-                    href="https://www.linkedin.com/in/anandmainali/"
-                    target="_blank"
-                >
-                    💼 LinkedIn
-                </a>
-
-                <a
-                    class="contact-link"
-                    href="https://stackoverflow.com/users/8519896/anand-mainali?tab=profile"
-                    target="_blank"
-                >
-                    💬 Stack Overflow
-                </a>
-
-                <a
-                    class="contact-link"
-                    href="mailto:anandmainali5@gmail.com"
-                >
-                    ✉️ Email
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            © 2026 Anand K. Mainali. Built with HTML & CSS.
-        </p>
-
-    </footer>
-
+    </div>
 </body>
+
 </html>
-```
