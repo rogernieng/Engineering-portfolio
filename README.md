@@ -21,5 +21,5 @@ SUMMARY IN PROGRESS
 <h3> 🤝🏻 Connect with Me </h3>
 
 <p align="center">
-<a href="https://www.linkedin.com/in/rogernieng" target="_blank">www.linkedin.com/in/rogernieng</a>
+<a href="https://www.linkedin.com/in/rogernieng" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@rogernieng-blue?style=flat&logo=linkedin"></a>
 </p>
