@@ -1,6 +1,32 @@
+/* ============================
+   RESET / BASE
+   ============================ */
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
 body {
 	font-family: 'Quicksand', serif;
 }
+
+/* ============================
+   FONT STYLE OVERRIDES
+   (Add font-family / font-size / font-weight rules here)
+   ============================ */
+
+
 
 .header {
 	text-align: center;
