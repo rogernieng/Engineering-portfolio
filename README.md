@@ -22,4 +22,5 @@ SUMMARY IN PROGRESS
 
 <p align="center">
 <a href="https://www.linkedin.com/in/rogernieng" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@rogernieng-blue?style=flat&logo=linkedin"></a>
+<a href="https://rogernieng.github.io/Engineering-portfolio/" target="_blank"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-Engineering--portfolio-blue?style=flat&logo=github"></a>
 </p>
