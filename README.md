@@ -4,19 +4,17 @@
 </p>
 
 ### Hi, I'm Roger Ni
-> Mechanical Engineering student
+> Mechanical Engineering 
 
 <div>
  <p>
-SUMMARY IN PROGRESS
+I'm a third-year Mechanical Engineering student at UC San Diego interested in robotics, sustainable energy, rocketry, and everything in between. My current skillset includes CAD, SolidWorks, MATLAB, Python, Arduino/ESP32, electronics, prototyping, and engineering analysis. I enjoy building hands-on projects and always looking to learn, adapt, and grow by takijng on new engineering challenges.
 </p>
 </div>
 
 ### Projects 🚀
 
-- [Project Name 1](https://github.com/username/project-1)
-- [Project Name 2](https://github.com/username/project-2)
-- [Project Name 3](https://github.com/username/project-3)
+- [Model Rocket]([https://github.com/username/project-1](https://rogernieng.github.io/Engineering-portfolio/projects/project1.html))
 
 <h3> 🤝🏻 Connect with Me </h3>
 
