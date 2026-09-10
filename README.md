@@ -14,7 +14,7 @@ I'm a third-year Mechanical Engineering student at UC San Diego interested in ro
 
 ### Projects 🚀
 
-- [Model Rocket]([https://github.com/username/project-1](https://rogernieng.github.io/Engineering-portfolio/projects/project1.html))
+- [Model Rocket](https://rogernieng.github.io/Engineering-portfolio/projects/project1.html)
 
 <h3> 🤝🏻 Connect with Me </h3>
 
