@@ -1,0 +1,226 @@
+%-------------------------
+% Resume in Latex
+% Author : Roger Ni
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+% Education-specific command:
+% Date on first row (regular font), location underneath
+\newcommand{\resumeEducationSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}
+}
+
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}
+}
+
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}\vspace{-6pt}
+}
+
+%-------------------------------------------
+%%%%%% RESUME STARTS HERE %%%%%%%%%%%%%%%%%%
+%-------------------------------------------
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\LARGE \scshape Roger Ni} \\ \vspace{1pt}
+    \small
+    916-248-1581 $|$
+    \href{mailto:wrogerni@gmail.com}{{wrogerni@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/roger-ni-104224233}{\underline{linkedin.com/in/rogernieng}} $|$ \href{https://rogernieng.github.io/Engineering-portfolio/index.html}{\underline{Portfolio}} $|$ {San Diego, CA} 
+\end{center}
+
+\vspace{-8pt}
+
+%-----------EDUCATION-----------
+
+\section{Education}
+
+\resumeSubHeadingListStart
+
+\resumeEducationSubheading
+{University of California, San Diego}{Sep. 2024 -- Jun. 2028}
+{B.S. in Mechanical Engineering,}{La Jolla, CA}
+
+\resumeItemListStart
+    \resumeItem{Coursework: MATLAB, Statics, Dynamics, Intro to Materials, Solid Mechanics, CNC Machining}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{IT Technician}{Aug. 2025 -- Present}
+{UC San Diego}{San Diego, CA}
+
+\resumeItemListStart
+    \resumeItem{Resolved network infrastructure anomalies, account access issues, university compliance and hardware faults for a campus community exceeding 70,000 users.}
+    \resumeItem{Optimized user experience by collaborating with multidisciplinary team members to streamlining communication for non technical users, achieving an efficient 20 minute average resolution time}
+\resumeItemListEnd
+
+\resumeSubheading
+{Undergraduate Research Assistant}{Dec. 2025 -- May 2026}
+{Carbide Materials Research, Xtreme Materials Lab, UC San Diego}{San Diego, CA}
+
+\resumeItemListStart
+    \resumeItem{Conducted research under Professor Olivia Graeve by analyzing peer-reviewed literature and extracting carbide material properties to support development of a 400+ entry materials database and reference website}
+    \resumeItem{Compiled and validated approximately 50 material entries, organizing experimental data and material properties into a structured database for research use}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EXTRACURRICULARS-----------
+
+\section{Extracurriculars}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Rocket Propulsion Laboratory}{May. 2026 -- Present}
+{Project Phoenix -- Hardware Avionics Engineer}{San Diego, CA}
+
+\resumeItemListStart
+    \resumeItem{Migrated a legacy Arduino rocket flight system to a compact ESP 32 architecture, consolidating ground station and flight computer functionalities}
+    \resumeItem{Engineered physical interfaces for high-speed Ethernet communication MOSFET-driven valve controls, and pressure transducer data acquisition while reducing system size by 30\%}
+\resumeItemListEnd
+
+\resumeSubheading
+{}{Sep. 2025 -- May 2026}
+{Project Daedalus -- Rocket Design Team Member}{San Diego, CA}
+
+\resumeItemListStart
+    \resumeItem{Co-engineered design, manufacture, and launch a solid-fuel G-class model rocket with a simulated apogee exceeding 4,000 ft}
+    \resumeItem{Modeled a nose cone and fin-can assembly in SOLIDWORKS and fabricated flight components using PLA 3D printing}
+    \resumeItem{Executed OpenRocket flight simulations to evaluate aerodynamic stability and mass distribution, achieving a 1.6-caliber stability margin and predicted maximum velocity of 650 ft/s}
+    \resumeItem{Designed and assembled a custom Arduino-based avionics system integrating inertial and pressure sensors, an onboard camera, and microSD storage for flight data acquisition and recording}
+\resumeItemListEnd
+
+\resumeSubheading
+{Engineering Without Borders -- Project Tijuana}{Jan. 2025 -- Jun. 2025}
+{Team Engineer}{San Diego, CA}
+
+\resumeItemListStart
+    \resumeItem{Co-engineered with six members to fabricate and assemble three load-tested community benches and custom 3D-printed toys for children's daycares in Tijuana}
+    \resumeItem{Operated woodworking equipment including multi-cutters, bandsaws, and sanders to fabricate structural components according to engineering drawings, dimensional tolerances, and specified component placement}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Remote-Controlled Soccer Robot}{Sep. 2025 -- Dec. 2025}
+{Mechanical Design Project}{San Diego, CA}
+
+\resumeItemListStart
+    \resumeItem{Co-engineered and fabricated a remote-controlled soccer robot, using Fusion 360 to develop the drivetrain, ball collection, and launching mechanisms under energy and material constraints}
+    \resumeItem{Integrated motors, gears, belt drives, and fabricated acrylic and metal components, iterating mechanical prototypes through rigorous testing cycles, significantly improve mechanical reliability and system responsiveness}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+
+\section{Technical Skills}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+    \textbf{Software}{: SolidWorks, Fusion 360, MATLAB, OpenRocket, C, Java Microsoft Excel} \\
+    \textbf{Manufacturing}{: LaserCAMM, , 3D Printing, Circuit Soldering, Woodworking, CNC Manufacturing, Lathe, Milling}
+}}
+\end{itemize}
+
+%-------------------------------------------
+
+\end{document}
